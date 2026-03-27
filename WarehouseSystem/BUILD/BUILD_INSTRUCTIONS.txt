@@ -1,0 +1,56 @@
+===================================================
+  BUILD INSTRUCTIONS - VISUAL STUDIO (WINDOWS)
+===================================================
+
+OPTION 1 - Open existing project file
+--------------------------------------
+1. Open Visual Studio 2019 or 2022
+2. File > Open > Project/Solution
+3. Select WarehouseSystem.vcxproj
+4. Build > Build Solution (Ctrl+Shift+B)
+5. Run with Ctrl+F5 (runs without debugger)
+
+Note: The .exe will be created in:
+  x64/Debug/WarehouseSystem.exe   (Debug build)
+  x64/Release/WarehouseSystem.exe (Release build)
+
+The .exe must be run from the SRC folder (or copy
+the .exe into SRC) so it can read/write the .csv
+data files in the same directory.
+
+
+OPTION 2 - Create a new project manually
+------------------------------------------
+1. Open Visual Studio
+2. Create New Project > Empty Project (C++)
+3. Add all .h and .cpp files from the SRC folder
+   into the project
+4. Build and Run
+
+
+OPTION 3 - Command line with g++ (MinGW)
+------------------------------------------
+cd SRC
+g++ main.cpp -o WarehouseSystem -std=c++17
+WarehouseSystem.exe
+
+
+DATA FILES
+-----------
+The system creates these files automatically in
+the same directory as the .exe:
+  products.csv   - product inventory
+  employees.csv  - registered employees
+  orders.csv     - all orders
+
+These are plain text CSV files and can be opened
+in Excel or Notepad for inspection.
+
+
+DEFAULT LOGIN
+--------------
+Manager:
+  Username : manager
+  Password : manager123
+
+Employees are created via the Manager dashboard.

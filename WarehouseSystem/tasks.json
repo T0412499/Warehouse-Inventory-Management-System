@@ -1,0 +1,18 @@
+{
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "Build",
+      "command": "g++",
+      "args": [
+        "-std=c++17",
+        "*.cpp",
+        "-o",
+        "WarehouseSystem"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}
